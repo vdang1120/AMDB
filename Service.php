@@ -94,7 +94,7 @@ class Service {
             $stmt->execute([$_POST['Name']]);
         }
         
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
