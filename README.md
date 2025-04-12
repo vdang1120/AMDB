@@ -7,6 +7,6 @@ Steps to Run:
 
 2. Open XAMPP Control Panel and Start Apache and MySQL
 
-3. Open MySQL/phpMyAdmin and import the 'amdb.sql' file from this directory
+3. Open MySQL/phpMyAdmin and import the 'amdb.sql' file from project directory
 
 4. Enter 'http://localhost/amdb/' into browser URL
