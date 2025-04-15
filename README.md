@@ -1,7 +1,21 @@
-## AMDB (American Movie Database)
+# AMDB (American Movie Database)
+## CSE 3330
 
-Steps to Run:
 
+AMDB stores information about American movies, such as their actors, directors, viewers, etc.
+The provided web interface allows the user to manage the **viewers** within the AMDB database. Users can add, update, delete, and search viewers.
+
+
+## Languages/Technologies:
+
+ - SQL
+ - MySQL
+ - PHP
+ - HTML
+ - CSS
+
+
+## Steps to Run:
 
 1. Move project directory (this folder) into 'htdocs' directory ( \xampp\htdocs )
 
