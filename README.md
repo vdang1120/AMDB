@@ -8,8 +8,7 @@ The provided web interface allows the user to manage the **viewers** within the 
 
 ## Languages/Technologies:
 
- - SQL
- - MySQL
+ - SQL/MySQL
  - PHP
  - HTML
  - CSS
