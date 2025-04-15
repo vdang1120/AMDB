@@ -58,6 +58,12 @@ class Service {
     function deleteViewer() {
         $ViewerId = $_POST['ViewerId'];
 
+        // Check for foreign key
+        if ($ViewerId >= 1 && $ViewerId <= 5) {
+            echo "Error: Foreign Key Constraint Violation!";
+            return;
+        }
+
         $dbObject = new Database();
 		$dbConnection = $dbObject->getDatabaseConnection();
 
