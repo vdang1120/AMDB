@@ -57,25 +57,33 @@ class Service {
 
     function deleteViewer() {
         $ViewerId = $_POST['ViewerId'];
+        $Name = $_POST['Name'];
 
         // Check for foreign key
-        if ($ViewerId >= 1 && $ViewerId <= 5) {
+        if (!empty($_POST['ViewerId']) && $ViewerId >= 1 && $ViewerId <= 5) {
             echo "Error: Foreign Key Constraint Violation!";
             return;
         }
 
         $dbObject = new Database();
 		$dbConnection = $dbObject->getDatabaseConnection();
-
-        $sql = "DELETE FROM viewer WHERE ViewerId=" .$ViewerId;
-        $stmt = $dbConnection->query($sql);
+        
+        if (!empty($_POST['ViewerId'])) {
+            $sql = "DELETE FROM viewer WHERE ViewerId = ?";
+            $stmt = $dbConnection->prepare($sql);
+            $stmt->execute([$ViewerId]);
+        } else {
+            $sql = "DELETE FROM viewer WHERE Name = ?";
+            $stmt = $dbConnection->prepare($sql);
+            $stmt->execute([$Name]);
+        }
         
         header("Location:");
     }
 
     function updateViewer() {
         $ViewerId = $_POST['ViewerId'];
-        $name = $_POST['name'];
+        $name = $_POST['Name'];
 
         $dbObject = new Database();
 		$dbConnection = $dbObject->getDatabaseConnection();

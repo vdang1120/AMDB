@@ -103,6 +103,7 @@ $Viewers = $service->fetchViewers();
             <fieldset>
                 <legend>Delete Viewer</legend>
                 <input type="number" name="ViewerId" placeholder="ID"><br>
+                <input type="text" name="Name" placeholder="Name"><br>
                 <input type="submit" name="Delete" value="Delete">
             </fieldset>
         </form>
@@ -111,7 +112,7 @@ $Viewers = $service->fetchViewers();
             <fieldset>
                 <legend>Update Viewer</legend>
                 <input type="number" name="ViewerId" placeholder="ID" required><br>
-                <input type="text" name="name" placeholder="New Name" required><br>
+                <input type="text" name="Name" placeholder="New Name" required><br>
                 <input type="submit" name="Update" value="Update">
             </fieldset>
         </form>
